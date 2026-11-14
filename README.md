@@ -1,6 +1,6 @@
-# 提效应用台（Python + pywebview + SQLite）
+# 提效应用台（Python + pywebview + MYSQL）
 
-一个运行在本机桌面窗口中的行业效率软件入口管理工具。应用界面使用 HTML、CSS 和 JavaScript，桌面窗口由 Python + pywebview 提供，行业与应用数据保存在本地 SQLite 数据库中。
+一个运行在本机桌面窗口中的行业效率软件入口管理工具。应用界面使用 HTML、CSS 和 JavaScript，桌面窗口由 Python + pywebview 提供，行业与应用数据保存在本地 MYSQL 数据库中。
 
 > 本项目是桌面管理工具，不是在线托管服务。每位使用者的数据默认保存在自己的电脑，不会自动同步给其他人。
 
@@ -13,7 +13,7 @@
 - [快速开始](#快速开始)
 - [在 PyCharm 中运行](#在-pycharm-中运行)
 - [如何使用](#如何使用)
-- [SQLite 数据说明](#sqlite-数据说明)
+- [MYSQL 数据说明](#sqlite-数据说明)
 - [项目结构](#项目结构)
 - [常见问题](#常见问题)
 - [当前版本说明与限制](#当前版本说明与限制)
@@ -103,7 +103,7 @@
 pywebview
 ```
 
-SQLite 使用 Python 内置的 `sqlite3`，不需要额外安装数据库驱动。
+
 
 不需要安装 Node.js、npm 或 pnpm；运行桌面版不需要执行 `pnpm install`。
 
@@ -227,7 +227,7 @@ python -c "import webview; print('pywebview 安装成功')"
 
 > 当前版本的应用编辑弹窗没有访问链接输入框。预置链接来自 `seed.json` 的首次初始化数据。需要修改或添加链接时，可直接编辑 SQLite 数据库中的 `apps.url` 字段；如果你希望在界面里管理链接，需要后续增加相应的编辑表单和 Python API。
 
-## SQLite 数据说明
+## MYSQL 数据说明
 
 ### 数据库文件位置
 
@@ -263,14 +263,14 @@ data/efficiency_hub.db
 
 ### 多人使用和同步
 
-SQLite 数据库默认只保存在本机，不会自动同步到 GitHub 或其他电脑。不要让多人直接在网络共享目录中同时打开同一个 SQLite 文件。如果需要多人共享，建议将数据层改成后端 API + 服务端 PostgreSQL/MySQL。
+MYSQL 数据库默认只保存在本机，不会自动同步到 GitHub 或其他电脑。不要让多人直接在网络共享目录中同时打开同一个 SQL 文件。如果需要多人共享，建议将数据层改成后端 API + 服务端 PostgreSQL/MySQL。
 
 ## 项目结构
 
 ```text
 项目根目录/
 ├── app.py                 # pywebview 窗口与 JavaScript-Python API
-├── database.py            # SQLite 初始化、读取和写入逻辑
+├── database.py            # MYSQL 初始化、读取和写入逻辑
 ├── seed.json              # 首次启动时导入的默认行业与应用
 ├── README.md              # 项目说明
 ├── .gitignore             # 忽略本地数据库、缓存和虚拟环境
