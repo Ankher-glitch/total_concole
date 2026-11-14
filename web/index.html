@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>提效应用台 | Efficiency Hub</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar"><div class="brand"><div class="brand-mark">✧</div><div><strong>提效应用台</strong><span>Efficiency Hub</span></div></div><div class="top-actions"><button class="icon-btn">♧<i></i></button><div class="avatar">施</div><span>施荣豪</span><span class="chevron">⌄</span></div></header>
+    <div class="workspace"><aside class="sidebar"><div class="side-heading"><div><span class="eyebrow">WORKSPACE</span><h2>行业空间</h2></div><button class="add-btn" id="new-industry-top">＋</button></div><label class="search"><span>⌕</span><input id="search" placeholder="搜索行业" /></label><nav class="industry-list" id="industry-list"></nav><button class="new-industry" id="new-industry-bottom"><span>＋</span>新建行业</button><div class="side-footer"><span class="status-dot"></span>数据已同步 <span>v1.0.0</span></div></aside><main class="main-content"><div class="breadcrumb"><span>行业空间</span><b>›</b><strong id="breadcrumb-name"></strong></div><section class="hero"><div><div class="section-kicker">INDUSTRY APPS</div><h1 id="industry-name"></h1><p>已整理 <span id="app-count"></span> 个效率应用，为你的行业工作提速</p></div><div class="hero-badge"><span>✦</span><small>行业精选</small></div></section><div class="section-header"><div><h2>应用入口 <span id="count-badge"></span></h2><p>点击独立访问按钮即可打开应用，编辑入口信息可从卡片菜单进入</p></div><button class="outline-btn" id="add-app">＋ 添加应用</button></div><div class="tool-grid" id="tool-grid"></div><div class="tip"><span>✦</span><p><strong>小提示</strong><br />你可以为每个行业配置专属的应用入口，让团队成员快速找到需要的工具。</p></div></main></div>
+  </div>
+  <div class="modal-backdrop hidden" id="modal-backdrop"><form class="modal" id="modal-form"><button type="button" class="modal-close" id="modal-close">×</button><span class="section-kicker" id="modal-kicker">APP ENTRY</span><h2 id="modal-title"></h2><p id="modal-desc"></p><div id="modal-fields"></div><div class="modal-actions"><button type="button" class="cancel-btn" id="modal-cancel">取消</button><button class="primary-btn" type="submit">保存</button></div></form></div>
+  <script src="app.js"></script>
+</body>
+</html>

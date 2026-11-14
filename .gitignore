@@ -1,0 +1,20 @@
+# 本地数据库和数据
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+
+# Python 虚拟环境
+.venv/
+venv/
+
+# PyCharm 本地配置
+.idea/
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
